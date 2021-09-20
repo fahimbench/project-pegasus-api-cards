@@ -1,0 +1,5 @@
+{% if field.value is not empty %}
+    {{ field.value | slice(0, 50) ~ '...' }}
+{% else %}
+    <span class="badge badge-secondary">{{ 'label.null'|trans(domain = 'EasyAdminBundle') }}</span>
+{% endif %}

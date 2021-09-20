@@ -1,0 +1,30 @@
+api_platform:
+    title: 'API Yu-Gi-Oh! FR'
+    description: 'API pour lister des cartes Yu-Gi-Oh! seulement FR'
+    version: '1.0.0'
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+
+    patch_formats:
+        json: ['application/merge-patch+json']
+    swagger:
+        versions: [3, 2]
+        api_keys:
+            apiKey:
+                name: X-AUTH-TOKEN
+                type: header
+    enable_swagger_ui: false
+    enable_re_doc: true
+    openapi:
+        contact:
+            name: 'Fahim BENCHAABANE'
+            url: 'fahim-benchaabane.fr'
+            email: 'f.benchaabane7@gmail.com'
+        termsOfService: '#'
+        license:
+            name: 'licence'
+            url: '#'
+    defaults:
+        stateless: true
+        cache_headers:
+            vary: ['Content-Type', 'Authorization', 'Origin']
